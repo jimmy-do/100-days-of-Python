@@ -1,5 +1,6 @@
 # Step 1
 import random
+import word_list
 
 # TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 
@@ -8,7 +9,8 @@ import random
 # TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
 
 
-word_list = ["aardvark", "baboon", "camel"]
+# word_list = ["aardvark", "baboon", "camel"]
+word_list = word_list.word_list
 
 chosen_word = random.choice(word_list)
 
