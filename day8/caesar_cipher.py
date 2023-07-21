@@ -6,23 +6,36 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 
-def encrypt(word, shift_amount):
+# def encrypt(word, shift_amount):
+#     for letter in word:
+#         position = alphabet.index(letter)
+#         new_position = position + shift_amount
+#         word = word.replace(letter, alphabet[new_position])
+#     return word
+#
+#
+# def decrypt(word, shift_amount):
+#     for letter in word:
+#         position = alphabet.index(letter)
+#         new_position = position - shift_amount
+#         word = word.replace(letter, alphabet[new_position])
+#     return word
+#
+#
+
+
+def caesar(word, shift_amount):
     for letter in word:
-        position = word.index(letter)
-        new_position = position + shift_amount
-        word = word.replace(letter, alphabet[new_position])
+        if direction == 'encode':
+            position = alphabet.index(letter)
+            new_position = position + shift_amount
+            word = word.replace(letter, alphabet[new_position])
+        elif direction == 'decode':
+            position = alphabet.index(letter)
+            new_position = position - shift_amount
+            word = word.replace(letter, alphabet[new_position])
     return word
 
 
-print(encrypt(text, shift))
-# TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount
-#  and print the encrypted text. e.g. plain_text = "hello" shift = 5 cipher_text = "mjqqt" print output: "The encoded
-#  text is mjqqt"
+print(f'{caesar(text, shift)}')
 
-# HINT: How do you get the index of an item in a list:
-# https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
-
-# 🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
-
-# TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a
-#  message.
