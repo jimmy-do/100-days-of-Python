@@ -25,8 +25,13 @@ operators = {
     "/": division
 }
 
-num1 = input('What\'s the number? ')
+num1 = int(input('What\'s the number? '))
+for key in operators:
+    print(key)
 operation = input('What\'s the operation? ')
-num2 = input('What\'s the next number?')
+num2 = int(input('What\'s the next number? '))
 
+calculate = operators[operation]
+answer = calculate(num1, num2)
 
+print(f'{num1} {operation} {num2} = {answer}')
