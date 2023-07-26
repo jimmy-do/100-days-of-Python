@@ -4,6 +4,10 @@ from resources import resources
 cost = 0
 
 
+def print_report():
+    print(resources)
+
+
 def return_cost(choice):
     global cost
     if choice == 1:
@@ -59,11 +63,7 @@ def calculate(cost_of_drink, menu_option, ingredients):
     elif difference > 0:
         print('Not enough money. Money refunded.')
     else:
-        print(f'Enjoy your {MENU(menu_option-1)}!')
-
-
-def print_report():
-    print(resources)
+        print(f'Enjoy your {MENU(menu_option - 1)}!')
 
 
 def play():
