@@ -62,8 +62,6 @@ def calculate(cost_of_drink, menu_option, ingredients):
             print('Enjoy your cappuccino!')
     elif difference > 0:
         print('Not enough money. Money refunded.')
-    else:
-        print(f'Enjoy your {MENU(menu_option - 1)}!')
 
 
 def play():
