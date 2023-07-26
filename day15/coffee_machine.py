@@ -50,10 +50,16 @@ def calculate(cost_of_drink, menu_option, ingredients):
         exit('Sorry no more ingredients.')
     if difference < 0:
         print(f"Here is your change: {'{:.2f}'.format(abs(difference))}")
+        if menu_option == 1:
+            print('Enjoy your espresso!')
+        elif menu_option == 2:
+            print('Enjoy your latte!')
+        elif menu_option == 3:
+            print('Enjoy your cappuccino!')
     elif difference > 0:
         print('Not enough money. Money refunded.')
     else:
-        print('Enjoy your drink!')
+        print(f'Enjoy your {MENU(menu_option-1)}!')
 
 
 def print_report():
