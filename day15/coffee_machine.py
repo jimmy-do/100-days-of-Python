@@ -66,6 +66,8 @@ def calculate(cost_of_drink, menu_option, ingredients):
 
 def play():
     user_prompt = int(input('What would you like?\n1) Espresso\n2) Latte\n3) Cappuccino?\n4) Report\n5) Exit '))
+    if user_prompt == 5:
+        exit('Please come again soon for more coffee!')
     if user_prompt == 4:
         print_report()
         return
