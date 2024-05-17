@@ -9,7 +9,7 @@ bmi = round(weight / (height ** 2))
 # print(bmi)
 
 if bmi < 18.5:
-    print('Your bmi is ' + bmi + ', you are underweight.')
+    print(f'Your bmi is {bmi}, you are underweight.')
 elif bmi < 25:
     print(f'Your bmi is {bmi}, you are normal weight.')
 elif bmi < 30:
