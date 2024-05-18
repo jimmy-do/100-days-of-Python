@@ -15,6 +15,8 @@ def play():
         exit('Please come back soon for more coffee! ️☕️')
     else:
         drink = menu.find_drink(user_prompt)
+        # if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+        #     coffee_maker.make_coffee(drink)
         enough_ingredients = coffee_maker.is_resource_sufficient(drink)
         if enough_ingredients:
             enough_money = money_machine.make_payment(drink.cost)
