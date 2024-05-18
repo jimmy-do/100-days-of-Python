@@ -6,6 +6,7 @@ menu = Menu()
 coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 
+
 def play():
     user_prompt = input('What would you like? (espresso/latte/cappuccino)').lower()
     if user_prompt == 'report':
@@ -22,6 +23,7 @@ def play():
             enough_money = money_machine.make_payment(drink.cost)
             if enough_ingredients and enough_money:
                 coffee_maker.make_coffee(drink)
+
 
 while True:
     play()
