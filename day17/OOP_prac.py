@@ -9,6 +9,7 @@ class User:
         user.followers += 1
         self.following += 1
 
+
 user_1 = User('001', 'jimmy')
 user_2 = User('002', 'tuliana')
 
@@ -26,5 +27,3 @@ print(f'{user_1.username} following: {user_1.following}')
 print(f'{user_2.username} followers: {user_2.followers}')
 print(f'{user_2.username} following: {user_2.following}')
 # You can put all repetitive code here inside the class method
-
-
