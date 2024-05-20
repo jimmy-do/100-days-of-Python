@@ -8,6 +8,7 @@ table = PrettyTable()
 # table.add_row(['Charmander','Fire'])
 # print(table)
 
-table.add_column('Pokémon', ['Pikachu', 'Squirtle', 'Charmander'])
+
+table.add_column('Pokemon', ['Pikachu', 'Squirtle', 'Charmander'])
 table.add_column('Type', ['Electric', 'Water', 'Fire'])
 print(table)
