@@ -9,14 +9,14 @@ for question in question_data:
     question_ans = question['answer']
     new_question = Question(question_text, question_ans)
     question_bank.append(new_question)
-    
-print(question_bank)
-print(QuizBrain(question_bank))
+
 quiz = QuizBrain(question_bank)
 
-while quiz.still_has_questions():
+# if quiz still has questions remaining:
+
+while quiz.still_has_questions:
+    if not quiz.still_has_questions():
+        print('You\'ve completed the quiz')
+        print(f'Your final score was {quiz.score}/{len(quiz.question_list)}')
+        break
     quiz.question()
-
-
-
-
