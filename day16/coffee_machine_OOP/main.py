@@ -13,7 +13,7 @@ def play():
         money_machine.report()
         coffee_maker.report()
     elif user_prompt == 'off':
-        exit('Please come back soon for more coffee! ️☕️')
+        exit('Please come back soon for more coffee! ☕️')
     else:
         drink = menu.find_drink(user_prompt)
         # if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
