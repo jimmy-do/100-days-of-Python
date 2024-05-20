@@ -4,10 +4,10 @@ from quiz_brain import QuizBrain
 
 question_bank = []
 
-for question in question_data:
-    question_text = question['text']
-    question_ans = question['answer']
-    new_question = Question(question_text, question_ans)
+for item in question_data:
+    question = item["question"]
+    answer = item["correct_answer"]
+    new_question = Question(question, answer)
     question_bank.append(new_question)
 
 quiz = QuizBrain(question_bank)
@@ -17,6 +17,6 @@ quiz = QuizBrain(question_bank)
 while quiz.still_has_questions:
     if not quiz.still_has_questions():
         print('You\'ve completed the quiz')
-        print(f'Your final score was {quiz.score}/{len(quiz.question_list)}')
+        print(f'Your final score was {quiz.score}/{quiz.question_number})')
         break
     quiz.question()
